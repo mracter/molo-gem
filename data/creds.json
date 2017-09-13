@@ -1,0 +1,12 @@
+[{
+    "username": "test_vk",
+    "endpoint": "127.0.0.1:5432/postgres",
+    "vault_path": "database/creds/postgresql_myschema_readonly",
+    "policy": "read",
+    "lease_duration": 100,
+    "password": "ithinkitwasamistakethatpickachurefusedtoevolveintoraichuandthathisloveforashwasholdinghimback",
+    "id": "default",
+    "renewable": true,
+    "backend": "postgresql",
+    "set_role": "gem_molo_app"
+}]
