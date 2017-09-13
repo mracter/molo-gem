@@ -1,5 +1,6 @@
 import os
-import django_vaultkeeper_adaptor
+import json
+from django_vaultkeeper_adaptor import vaultkeeper_adaptor
 from .base import *  # noqa
 
 
@@ -87,6 +88,18 @@ COMPRESS_OFFLINE_CONTEXT = {  # noqa
     'STATIC_URL': STATIC_URL,  # noqa
     'ENV': ENV,  # noqa
 }  # noqa
+
+credential_path = environ.get('CREDENTIAL_PATH','')
+with open(credential_path) as f:
+    data = json.loads(f)
+
+vk_adaptor = vaultkeeper_adaptor.VKAdaptor(
+    data=data,
+    DATABASES=DATABASES,
+    BROKER_URL=BROKER_URL,
+)
+vk_adaptor.process_all()
+
 
 try:
     from .local import *  # noqa
