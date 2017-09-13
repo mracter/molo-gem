@@ -1,4 +1,5 @@
 import os
+import django_vaultkeeper_adaptor
 from .base import *  # noqa
 
 
@@ -40,6 +41,7 @@ COMPRESS_OFFLINE = True
 #         }
 #     }
 # }
+
 
 
 # service-directory settings
