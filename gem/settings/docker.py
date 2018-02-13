@@ -25,8 +25,8 @@ SERVICE_DIRECTORY_API_PASSWORD = environ.get(
 GOOGLE_PLACES_API_SERVER_KEY = environ.get(
     'GOOGLE_PLACES_API_SERVER_KEY', '')
 
-RAVEN_DSN = environ.get('RAVEN_DSN')
-RAVEN_CONFIG = {'dsn': RAVEN_DSN} if RAVEN_DSN else {}
+# RAVEN_DSN = environ.get('RAVEN_DSN')
+# RAVEN_CONFIG = {'dsn': RAVEN_DSN} if RAVEN_DSN else {}
 
 CAS_SERVER_URL = environ.get('CAS_SERVER_URL') or ''
 
