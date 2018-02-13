@@ -97,6 +97,7 @@ INSTALLED_APPS = [
     'el_pagination',
     'import_export',
     'storages',
+    'postgresql_setrole27',
     'postgresql_setrole',
 ]
 

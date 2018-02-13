@@ -12,7 +12,7 @@ DATABASES = {
 with open ('./data/creds.json') as f:
     data = json.loads(f)
 
-vk_adaptor = vaultkeeper_adaptor.VKAdaptor(data=data,
+vk_adaptor = vaultkeeper_adaptor.VKAdaptor(
                                            DATABASES=DATABASES,
                                            BROKER_URL=BROKER_URL)
 vk_adaptor.process_all()

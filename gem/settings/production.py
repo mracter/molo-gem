@@ -89,16 +89,16 @@ COMPRESS_OFFLINE_CONTEXT = {  # noqa
     'ENV': ENV,  # noqa
 }  # noqa
 
-credential_path = environ.get('CREDENTIAL_PATH','')
-with open(credential_path) as f:
-    data = json.loads(f)
 
-vk_adaptor = vaultkeeper_adaptor.VKAdaptor(
-    data=data,
-    DATABASES=DATABASES,
-    BROKER_URL=BROKER_URL,
-)
-vk_adaptor.process_all()
+cfg = environ.get('CREDENTIAL_PATH','')
+
+if cfg != '':
+    vk_adaptor = vaultkeeper_adaptor.VKAdaptor(
+        config_path=cfg,
+        DATABASES=DATABASES,
+        BROKER_URL=BROKER_URL,
+    )
+    vk_adaptor.process_all()
 
 
 try:

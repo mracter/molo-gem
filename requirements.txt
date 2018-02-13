@@ -17,3 +17,4 @@ django-google-analytics-app==2.1.6
 django-storages
 boto
 typing
+django-postgresql-setrole27
