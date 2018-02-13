@@ -98,7 +98,6 @@ INSTALLED_APPS = [
     'import_export',
     'storages',
     'postgresql_setrole27',
-    'postgresql_setrole',
 ]
 
 COMMENTS_APP = 'molo.commenting'
